@@ -1,0 +1,32 @@
+<!DOCTYPE html> <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenie wielkie</title>
+    <script>
+        function oblicz(){
+            var waga = document.getElementById("waga").value;
+            var wiek = document.getElementById("wiek").value;
+            var mhr = 202 - 0.55 * wiek;
+            document.getElementById("wynik").innerHTML=mhr.toFixed(2);
+        }
+        function oblicz2(){
+            var waga = document.getElementById("waga").value;
+            var wiek = document.getElementById("wiek").value;
+            var mhr = 216 - 1.09 * wiek;
+            document.getElementById("wynik").innerHTML=mhr.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+<h1>Oblicz swoje MHR</h1>
+<label for="wiek"> Podaj swój wiek:</label>
+<input type="number" id="wiek" dir="ltr" value=0>
+<label for="waga"> Podaj swoją wage:</label>
+<input type="number" id="waga" value=0>
+<input type="button" value="Oblicz BMI dla mężczyzny" onclick="oblicz()">
+<input type="button" value="Oblicz BMI dla kobiety" onclick="oblicz2()">
+<div id="wynik">Tu bedzie obliczone Mhr</div>
+</body>
+</html>
